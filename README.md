@@ -42,31 +42,33 @@ movie-ticket-booking-system/
 
 ## Installation & Setup
 
-### 1. Clone the repository:
+### 1. Clone the repository
 ```bash
 git clone https://github.com/Mudi-Srilakshmi/movie-ticket-booking-system.git
 cd movie-ticket-booking-system
+```
 
-### 2. Create and activate virtual environment:
-
+### 2. Create and activate virtual environment
+```bash
 python -m venv env
 source env/Scripts/activate   # Windows
+```
 
-
-### 3. Install dependencies:
-
+### 3. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-
-### 4. Apply migrations:
-
+### 4. Apply migrations
+```bash
 python manage.py makemigrations
 python manage.py migrate
+```
 
-
-### 5. Run the server:
-
+### 5. Run the server
+```bash
 python manage.py runserver
+```
 
 ---
 
