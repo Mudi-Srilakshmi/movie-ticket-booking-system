@@ -1,79 +1,102 @@
 # Movie Ticket Booking System
 
-A Django-based web application for booking movie tickets, allowing users to browse movies, select showtimes, and book seats. The backend is built using Django and Django REST Framework (DRF).
+A backend-focused web application for booking movie tickets, built using **Django** and **Django REST Framework (DRF)**.  
+The project exposes secure REST APIs that can be consumed by web or mobile frontends.
+
+---
 
 ## Features
 
-- User signup, login, and authentication (JWT)
-- Browse movies and showtimes
-- Book movie tickets
-- Admin panel to manage movies, shows, and bookings
-- REST API endpoints for frontend or mobile app integration
-- API documentation using Swagger (drf-yasg)
+- User registration and login using **JWT authentication**
+- Browse available movies and show details
+- Book movie tickets securely
+- Admin panel to manage movies and bookings
+- RESTful API design for frontend/mobile integration
+- Interactive API documentation using **Swagger (drf-yasg)**
+
+---
 
 ## Tech Stack
 
-- **Backend:** Django, Django REST Framework, djangorestframework-simplejwt, drf-yasg  
-- **Database:** SQLite (default, can be replaced with PostgreSQL/MySQL)  
-- **Authentication:** JWT  
+- **Backend:** Python, Django, Django REST Framework  
+- **Authentication:** JWT (djangorestframework-simplejwt)  
+- **Database:** SQLite (can be replaced with PostgreSQL/MySQL)  
+- **API Docs:** Swagger (drf-yasg)
 
-## Installation
+---
 
-1. Clone the repository:
+## Project Structure
+
+movie-ticket-booking-system/
+├── backend/
+├── booking/
+├── manage.py
+├── serializers.py
+├── models.py
+├── views.py
+├── urls.py
+└── README.md
+
+
+---
+
+## Installation & Setup
+
+### 1. Clone the repository:
 ```bash
 git clone https://github.com/Mudi-Srilakshmi/movie-ticket-booking-system.git
 cd movie-ticket-booking-system
 
-Create a virtual environment:
-----------------
+### 2. Create and activate virtual environment:
+
 python -m venv env
 source env/Scripts/activate   # Windows
-# or
-source env/bin/activate       # macOS/Linux
 
-Install dependencies:
--------------------
+
+### 3. Install dependencies:
+
 pip install -r requirements.txt
 
-Apply migrations:
------------------
+
+### 4. Apply migrations:
+
 python manage.py makemigrations
 python manage.py migrate
 
-Run the development server:
-------------------
+
+### 5. Run the server:
+
 python manage.py runserver
 
-Open the app in your browser:
-------------------
-http://127.0.0.1:8000/
+---
 
-API Endpoints
-------------------
-POST /api/signup/ – Register a new user
+## API Endpoints
 
-POST /api/login/ – Login and get JWT token
-
+POST /api/signup/ – User registration
+POST /api/login/ – User login (JWT)
 GET /api/movies/ – List all movies
-
 POST /api/book/ – Book a ticket
 
-API documentation is available at:
-----------------------
+---
+
+## API Documentation
+
+Swagger UI available at:
+
 http://127.0.0.1:8000/swagger/
 
-Contributing:
--------------
-Fork the repository
+---
 
-Create a new branch (git checkout -b feature/your-feature)
+## Future Improvements
 
-Commit your changes (git commit -m "Add some feature")
+Seat selection and availability logic
+Payment gateway integration
+Booking history for users
+Deployment using Docker and cloud platforms
 
-Push to the branch (git push origin feature/your-feature)
+---
 
-Create a Pull Request
+## Author
 
-
-
-
+Srilakshmi Mudi
+Aspiring Python & Django Developer
